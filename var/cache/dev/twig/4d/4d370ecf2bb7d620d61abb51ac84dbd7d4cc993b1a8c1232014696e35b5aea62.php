@@ -85,7 +85,9 @@ class __TwigTemplate_609baca779195f08bc2c5a9c05558f2a42b578171d9de8866298855b119
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<form method=\"post\">
+        echo "<form method=\"post\" action=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">
     ";
         // line 7
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
@@ -157,7 +159,7 @@ class __TwigTemplate_609baca779195f08bc2c5a9c05558f2a42b578171d9de8866298855b119
 
     public function getDebugInfo()
     {
-        return array (  134 => 37,  128 => 24,  120 => 19,  115 => 16,  107 => 13,  104 => 12,  102 => 11,  99 => 10,  93 => 8,  91 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  136 => 37,  130 => 24,  122 => 19,  117 => 16,  109 => 13,  106 => 12,  104 => 11,  101 => 10,  95 => 8,  93 => 7,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -167,7 +169,7 @@ class __TwigTemplate_609baca779195f08bc2c5a9c05558f2a42b578171d9de8866298855b119
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method=\"post\">
+<form method=\"post\" action=\"{{ path('app_login') }}\">
     {% if error %}
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -204,6 +206,6 @@ class __TwigTemplate_609baca779195f08bc2c5a9c05558f2a42b578171d9de8866298855b119
     </button>
 </form>
 {% endblock %}
-", "security/login.html.twig", "D:\\wamp\\www\\symfony5mars\\templates\\security\\login.html.twig");
+", "security/login.html.twig", "C:\\xampp\\htdocs\\coursIPSSI\\tp-symfony-cardGame\\templates\\security\\login.html.twig");
     }
 }

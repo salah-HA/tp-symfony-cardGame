@@ -61,33 +61,42 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         // line 10
         echo "</head>
 <body>
-<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-    <a href=\"";
-        // line 13
+
+";
+        // line 14
+        echo "    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <a href=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("card");
         echo "\" class=\"nav-link\">Form Card</a>
-    <a href=\"";
-        // line 14
+        <a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("category");
         echo "\" class=\"nav-link\">Form Category</a>
-    <a href=\"";
-        // line 15
+        <a href=\"";
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("carte");
         echo "\" class=\"nav-link\">Card List</a>
-    <a href=\"";
-        // line 16
+        <a href=\"";
+        // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("faction");
         echo "\" class=\"nav-link\">Faction List</a>
-</nav>
-
+        <!--<a href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\" class=\"nav-link\">Déconnecter</a>-->
+    </nav>
+";
+        // line 26
+        echo "
 <div id=\"pageContent\"></div>
 <canvas id=\"c\"></canvas>
 ";
-        // line 21
+        // line 29
         $this->displayBlock('body', $context, $blocks);
-        // line 23
+        // line 31
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 271
+        // line 284
         echo "</body>
 </html>
 ";
@@ -136,7 +145,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 21
+    // line 29
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -154,7 +163,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     }
 
-    // line 23
+    // line 31
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -164,18 +173,20 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 24
-        echo "    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"
-            integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\"
-            crossorigin=\"anonymous\"></script>
-    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
+        // line 35
+        echo "    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
             integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\"
+            crossorigin=\"anonymous\"></script>
+    <script
+            src=\"https://code.jquery.com/jquery-3.4.1.min.js\"
+            integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\"
             crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
             integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\"
             crossorigin=\"anonymous\"></script>
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
-    <script src=\"https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js\"></script>
+    ";
+        // line 47
+        echo "
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js\"></script>
     <script type=\"text/javascript\">
         \$(document).ready(function () {
@@ -432,7 +443,7 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 
     public function getDebugInfo()
     {
-        return array (  168 => 24,  158 => 23,  140 => 21,  122 => 9,  103 => 5,  91 => 271,  89 => 23,  87 => 21,  79 => 16,  75 => 15,  71 => 14,  67 => 13,  62 => 10,  60 => 9,  53 => 5,  47 => 1,);
+        return array (  189 => 47,  177 => 35,  167 => 31,  149 => 29,  131 => 9,  112 => 5,  100 => 284,  98 => 31,  96 => 29,  91 => 26,  86 => 19,  82 => 18,  78 => 17,  74 => 16,  70 => 15,  67 => 14,  62 => 10,  60 => 9,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -448,29 +459,42 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
-    <a href=\"{{ path('card') }}\" class=\"nav-link\">Form Card</a>
-    <a href=\"{{ path('category') }}\" class=\"nav-link\">Form Category</a>
-    <a href=\"{{ path('carte') }}\" class=\"nav-link\">Card List</a>
-    <a href=\"{{ path('faction') }}\" class=\"nav-link\">Faction List</a>
-</nav>
+
+{#% if app.user %#}
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <a href=\"{{ path('card') }}\" class=\"nav-link\">Form Card</a>
+        <a href=\"{{ path('category') }}\" class=\"nav-link\">Form Category</a>
+        <a href=\"{{ path('carte') }}\" class=\"nav-link\">Card List</a>
+        <a href=\"{{ path('faction') }}\" class=\"nav-link\">Faction List</a>
+        <!--<a href=\"{{ path('app_logout') }}\" class=\"nav-link\">Déconnecter</a>-->
+    </nav>
+{#% else %}
+    <nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        <a href=\"{{ path('app_login') }}\" class=\"nav-link\">Connection</a>
+    </nav>
+{% endif %#}
 
 <div id=\"pageContent\"></div>
 <canvas id=\"c\"></canvas>
 {% block body %}
 {% endblock %}
 {% block javascripts %}
-    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"
+{#    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\"
             integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\"
-            crossorigin=\"anonymous\"></script>
+            crossorigin=\"anonymous\"></script>#}
     <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"
             integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\"
+            crossorigin=\"anonymous\"></script>
+    <script
+            src=\"https://code.jquery.com/jquery-3.4.1.min.js\"
+            integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\"
             crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\"
             integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\"
             crossorigin=\"anonymous\"></script>
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>
-    <script src=\"https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js\"></script>
+    {#<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js\"></script>#}
+{#    <script src=\"https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js\"></script>#}
+
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js\"></script>
     <script type=\"text/javascript\">
         \$(document).ready(function () {
@@ -709,6 +733,6 @@ class __TwigTemplate_6ddc216faa59a07abe95bc8b7a0881f5557b0706db83acd786cf3af7f8d
 {% endblock %}
 </body>
 </html>
-", "base.html.twig", "C:\\xampp\\htdocs\\coursIPSSI\\symfony5mars\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\coursIPSSI\\tp-symfony-cardGame\\templates\\base.html.twig");
     }
 }

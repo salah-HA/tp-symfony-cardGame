@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -46,6 +48,22 @@ class Card
      * @ORM\Column(type="string", length=255)
      */
     private $image;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Deck", mappedBy="cards")
+     */
+    private $decks;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\DeckCard", mappedBy="cards")
+     */
+    private $deckCards;
+
+    public function __construct()
+    {
+        $this->decks = new ArrayCollection();
+        $this->deckCards = new ArrayCollection();
+    }
 
     
 
@@ -122,6 +140,65 @@ class Card
     public function setImage(string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Deck[]
+     */
+    public function getDecks(): Collection
+    {
+        return $this->decks;
+    }
+
+    public function addDeck(Deck $deck): self
+    {
+        if (!$this->decks->contains($deck)) {
+            $this->decks[] = $deck;
+            $deck->addCard($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDeck(Deck $deck): self
+    {
+        if ($this->decks->contains($deck)) {
+            $this->decks->removeElement($deck);
+            $deck->removeCard($this);
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|DeckCard[]
+     */
+    public function getDeckCards(): Collection
+    {
+        return $this->deckCards;
+    }
+
+    public function addDeckCard(DeckCard $deckCard): self
+    {
+        if (!$this->deckCards->contains($deckCard)) {
+            $this->deckCards[] = $deckCard;
+            $deckCard->setCards($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDeckCard(DeckCard $deckCard): self
+    {
+        if ($this->deckCards->contains($deckCard)) {
+            $this->deckCards->removeElement($deckCard);
+            // set the owning side to null (unless already changed)
+            if ($deckCard->getCards() === $this) {
+                $deckCard->setCards(null);
+            }
+        }
 
         return $this;
     }
