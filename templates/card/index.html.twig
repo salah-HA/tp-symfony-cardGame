@@ -1,0 +1,91 @@
+
+<div class="containerCard">
+    {% for card in cards %}
+        <div class="card">
+            <div class="cardTitle">
+                {{ card.name }}
+            </div>
+            <div class="cardImage">
+                <img src="{{ asset('/uploads/cards/' ~ card.image) }}" alt="cardImage" class="imageCard">
+            </div>
+            <div class="cardInfo">
+                <div class="infoCard">
+                    <img src="{{ asset('/img/hp.png') }}" alt="" class="infoImg">
+                    {{ card.life }}
+                </div>
+                <div class="infoCard">
+                    <img src="{{ asset('/img/poing.png') }}" alt="" class="infoImg">
+                    {{ card.attack }}
+                </div>
+            </div>
+            <div class="cardDescription">
+                <ul>
+                    <li>
+                        C
+                    </li>
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+    {% block stylesheets %}
+        <style>
+            .containerCard{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .card{
+                border: solid 2px black;
+                width: 20%;
+                background-color: #999999;
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 10px 10px;
+            }
+            .cardTitle{
+                width: 95%;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding-bottom: 2%;
+                padding-top: 2%;
+                font-family: 'Girassol', cursive;
+                font-size: 120%;
+            }
+            .cardImage{
+                border: solid 1px black;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: goldenrod;
+            }
+            .imageCard{
+                width: 100%;
+
+            }
+            .cardInfo{
+                width: 95%;
+                margin-right: auto;
+                margin-left: auto;
+                font-family: 'Ibarra Real Nova', serif;
+                font-size: 100%;
+                font-weight: bold;
+                display: flex;
+            }
+            .infoImg{
+                width: 30%;
+                margin-left: 1%;
+                margin-right: 2%;
+            }
+            .infoCard{
+                margin-right: auto;
+                margin-left: auto;
+                width: 30%;
+            }
+            .cardDescription{
+                width: 100%;
+                background-color: #5eb5e0;
+            }
+        </style>
+    {% endblock %}
